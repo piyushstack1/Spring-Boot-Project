@@ -7,6 +7,7 @@ phases:
   build:
     commands:
       - echo "Building the Spring Boot application..."
+      - cd airbnb
       - chmod +x mvnw
       - ./mvnw clean package -DskipTests
   post_build:
@@ -15,6 +16,6 @@ phases:
 
 artifacts:
   files:
-    - target/airbnb-0.0.1-SNAPSHOT.jar
-    - Procfile
+    - airbnb/target/airbnb-0.0.1-SNAPSHOT.jar
+    - airbnb/Procfile
   discard-paths: yes
